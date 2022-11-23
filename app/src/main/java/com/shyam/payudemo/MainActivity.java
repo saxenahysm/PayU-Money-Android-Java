@@ -114,7 +114,7 @@ public class MainActivity extends AppCompatActivity {
                     Log.e(TAG, "generateHash:response " + response);
                     try {
                         JSONObject jsonObject = new JSONObject(response);
-                        hashString = jsonObject.getString("status");
+                        hashString = jsonObject.getString("payment_hash");
                     } catch (Exception e) {
                         e.printStackTrace();
                     }
