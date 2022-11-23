@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config xmlns:android="http://schemas.android.com/apk/res/android">
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">nagarnigamprojects.in</domain>
+        <domain includeSubdomains="true">entitcs.com</domain>
+        <domain includeSubdomains="true">smartcity.entitcs.com</domain>
+        <domain includeSubdomains="true">www.indianrail.gov.in</domain>
+        <domain includeSubdomains="true">202.66.172.107</domain>
+        <domain includeSubdomains="true">yotech.co.in</domain>
+        <domain includeSubdomains="true">172.105.40.105</domain>
+        <domain includeSubdomains="true">bpms.sudacg.in</domain>
+        <domain includeSubdomains="true">www.bpms.sudacg.in</domain>
+        <trust-anchors>
+            <certificates src="@raw/ssl_certificate"/>
+        </trust-anchors>
+    </domain-config>
+</network-security-config>
