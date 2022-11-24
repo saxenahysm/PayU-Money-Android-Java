@@ -28,11 +28,15 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    String strKeyTest = "oZ7oo9";
-    String strSaltTest = "UkojH5TS";
+    String strKey = "oZ7oo9";
+    String strSalt = "UkojH5TS";
 
-    String strKeyTestPublic = "gtKFFX";
-    String strSaltProdPublic = "eCwwELxi";
+    //Rupendra
+    String strKey1 = "7rnFly";
+    String strSalt1 = "pjVQAWpA";
+
+    String strKeyTest2 = "gtKFFX";
+    String strSaltProd2 = "eCwwELxi";
     String TAG = "TAG123";
     String txnid = "001", amount = "1.0", productinfo = "test", firstname = "shyam", email = "shyam@entitcs.com",
             user_credentials = "", udf1 = "", udf2 = "", udf3 = "", udf4 = "", udf5 = "", offerKey = "", cardBin = "",
@@ -59,14 +63,13 @@ public class MainActivity extends AppCompatActivity {
         builder.setAmount(amount)
                 .setIsProduction(true)
                 .setProductInfo(productinfo)
-                .setKey(strKeyTestPublic)
+                .setKey(strKey1)
                 .setPhone(phone)
                 .setTransactionId(String.valueOf(System.currentTimeMillis()))
                 .setFirstName(firstname)
                 .setEmail(email)
                 .setSurl("https://payuresponse.firebaseapp.com/success")
                 .setFurl("https://payuresponse.firebaseapp.com/failure")
-                .setUserCredential(strKeyTestPublic +":"+email)
                 .setAdditionalParams(additionalParams);
 
         PayUPaymentParams payUPaymentParams = builder.build();
