@@ -30,8 +30,10 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
     //from RMC-client
-    String strKey = "oZ7oo9";
-    String strSalt = "UkojH5TS";
+//    String strKey = "oZ7oo9";
+//    String strSalt = "UkojH5TS";
+    String strKey = "gtKFFx";
+    String strSalt = "4R38IvwiV57FwVpsgOvTXBdLE4tHUXFW";
     //Rupendra
     String strKey1 = "7rnFly";
     String strSalt1 = "pjVQAWpA";
@@ -60,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
         additionalParams.put(PayUCheckoutProConstants.CP_UDF5, udf5);
 
         PayUPaymentParams.Builder builder = new PayUPaymentParams.Builder();
-        builder .setKey(strKey1)
+        builder .setKey(strKey)
                 .setIsProduction(true)
                 .setTransactionId(txnid)
                 .setAmount(amount)
@@ -130,10 +132,10 @@ public class MainActivity extends AppCompatActivity {
 
     void generateHash() {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://nagarnigamprojects.in/morraipur/websiervice/webservice/payUMoneyHashGenerater.php", response -> {
+            Log.e(TAG, "generateHash: " + response);
             try {
                 JSONObject jsonObject = new JSONObject(response);
                 hashString = jsonObject.getString("payment_hash");
-                Log.e(TAG, "generateHash: " + hashString);
             } catch (Exception e) {
                 e.printStackTrace();
             }
