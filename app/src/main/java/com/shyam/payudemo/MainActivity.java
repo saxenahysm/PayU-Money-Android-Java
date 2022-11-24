@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
 
+import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -27,9 +28,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    String strKey = "oZ7oo9";
-    String strSalt = "UkojH5TS";
+    String strKeyTest = "oZ7oo9";
+    String strSaltTest = "UkojH5TS";
+
+    String strKeyTestPublic = "gtKFFX";
+    String strSaltProdPublic = "eCwwELxi";
     String TAG = "TAG123";
+    String txnid = "001", amount = "1.0", productinfo = "test", firstname = "shyam", email = "shyam@entitcs.com",
+            user_credentials = "", udf1 = "", udf2 = "", udf3 = "", udf4 = "", udf5 = "", offerKey = "", cardBin = "",
+            phone = "7224857968";
+    String hashString = "";
 
     @Override
 
@@ -41,18 +49,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void startPayment(View v) {
         HashMap<String, Object> additionalParams = new HashMap<>();
-        additionalParams.put(PayUCheckoutProConstants.CP_UDF1, "udf1");
-        additionalParams.put(PayUCheckoutProConstants.CP_UDF2, "udf2");
-        additionalParams.put(PayUCheckoutProConstants.CP_UDF3, "udf3");
-        additionalParams.put(PayUCheckoutProConstants.CP_UDF4, "udf4");
-        additionalParams.put(PayUCheckoutProConstants.CP_UDF5, "udf5");
-        // to show saved sodexo card
-//        additionalParams.put(PayUCheckoutProConstants.SODEXO_SOURCE_ID, "srcid123");
+        additionalParams.put(PayUCheckoutProConstants.CP_UDF1, udf1);
+        additionalParams.put(PayUCheckoutProConstants.CP_UDF2, udf2);
+        additionalParams.put(PayUCheckoutProConstants.CP_UDF3, udf3);
+        additionalParams.put(PayUCheckoutProConstants.CP_UDF4, udf4);
+        additionalParams.put(PayUCheckoutProConstants.CP_UDF5, udf5);
 
         PayUPaymentParams.Builder builder = new PayUPaymentParams.Builder();
-        builder.setAmount(amount).setIsProduction(true).setProductInfo(productinfo).setKey(strKey).setPhone(phone).setTransactionId(txnid).setFirstName(firstname).setEmail(email).setSurl("https://payuresponse.firebaseapp.com/success").setFurl("https://payuresponse.firebaseapp.com/failure");
-//                .setUserCredential("");
-//        .setAdditionalParams(<HashMap<String,Object>>); //Optional, can contain any additional PG params
+        builder.setAmount(amount)
+                .setIsProduction(true)
+                .setProductInfo(productinfo)
+                .setKey(strKeyTestPublic)
+                .setPhone(phone)
+                .setTransactionId(String.valueOf(System.currentTimeMillis()))
+                .setFirstName(firstname)
+                .setEmail(email)
+                .setSurl("https://payuresponse.firebaseapp.com/success")
+                .setFurl("https://payuresponse.firebaseapp.com/failure")
+                .setUserCredential(strKeyTestPublic +":"+email)
+                .setAdditionalParams(additionalParams);
+
         PayUPaymentParams payUPaymentParams = builder.build();
 
         PayUCheckoutPro.open(this, payUPaymentParams, new PayUCheckoutProListener() {
@@ -63,8 +79,7 @@ public class MainActivity extends AppCompatActivity {
                 HashMap<String, Object> result = (HashMap<String, Object>) response;
                 String payuResponse = (String) result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE);
                 String merchantResponse = (String) result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE);
-                Log.e(TAG, "onPaymentSuccess:payuResponse " + payuResponse);
-                Log.e(TAG, "onPaymentSuccess:merchantResponse " + merchantResponse);
+                Log.e(TAG, "onPaymentSuccess: "+payuResponse );
             }
 
             @Override
@@ -73,21 +88,23 @@ public class MainActivity extends AppCompatActivity {
                 HashMap<String, Object> result = (HashMap<String, Object>) response;
                 String payuResponse = (String) result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE);
                 String merchantResponse = (String) result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE);
+                Log.e(TAG, "onPaymentFailure: "+payuResponse );
             }
 
             @Override
             public void onPaymentCancel(boolean isTxnInitiated) {
-                Log.e(TAG, "onPaymentCancel: ");
+                Log.e(TAG, "onPaymentCancel: "+isTxnInitiated );
             }
 
             @Override
-            public void onError(ErrorResponse errorResponse) {
-                String errorMessage = errorResponse.getErrorMessage();
-                Log.e(TAG, "onError: ");
+            public void onError(@NonNull ErrorResponse errorResponse) {
+                Log.e(TAG, "onError: "+errorResponse.getErrorCode() );
+                Log.e(TAG, "onError: "+errorResponse.getErrorMessage() );
             }
 
             @Override
             public void setWebViewProperties(@Nullable WebView webView, @Nullable Object o) {
+                Log.e(TAG, "setWebViewProperties: " );
                 //For setting webview properties, if any. Check Customized Integration section for more details on this
             }
 
@@ -97,31 +114,28 @@ public class MainActivity extends AppCompatActivity {
                 String hashData = valueMap.get(PayUCheckoutProConstants.CP_HASH_STRING);
                 if (!TextUtils.isEmpty(hashName) && !TextUtils.isEmpty(hashData)) {
                     //Do not generate hash from local, it needs to be calculated from server side only. Here, hashString contains hash created from your server side.
+                    String hash = hashString;
+                    Log.e(TAG, "generateHash: "+hash );
                     HashMap<String, String> dataMap = new HashMap<>();
-                    dataMap.put(hashName, hashString);
+                    dataMap.put(hashName, hash);
                     hashGenerationListener.onHashGenerated(dataMap);
                 }
             }
         });
     }
 
-    String txnid = "001", amount = "1.0", productinfo = "test", firstname = "shyam", email = "shyam@entitcs.com", user_credentials = "", udf1 = "", udf2 = "", udf3 = "", udf4 = "", udf5 = "", offerKey = "", cardBin = "", phone = "";
-    String hashString = "";
-
     void generateHash() {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://nagarnigamprojects.in/morraipur/websiervice/webservice/payUMoneyHashGenerater.php",
-                response -> {
-                    Log.e(TAG, "generateHash:response " + response);
-                    try {
-                        JSONObject jsonObject = new JSONObject(response);
-                        hashString = jsonObject.getString("payment_hash");
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                },
-                error -> {
-                    Log.e(TAG, "generateHash: " + error.toString());
-                }) {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://nagarnigamprojects.in/morraipur/websiervice/webservice/payUMoneyHashGenerater.php", response -> {
+            Log.e(TAG, "generateHash:response " + response);
+            try {
+                JSONObject jsonObject = new JSONObject(response);
+                hashString = jsonObject.getString("payment_hash");
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }, error -> {
+            Log.e(TAG, "generateHash: " + error.toString());
+        }) {
             @Nullable
             @Override
             protected Map<String, String> getParams() throws AuthFailureError {
