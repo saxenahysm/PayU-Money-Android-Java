@@ -5,6 +5,7 @@ import android.text.TextUtils;
 import android.util.Log;
 import android.view.View;
 import android.webkit.WebView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -28,18 +29,17 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
+    //from RMC-client
     String strKey = "oZ7oo9";
     String strSalt = "UkojH5TS";
-
     //Rupendra
     String strKey1 = "7rnFly";
     String strSalt1 = "pjVQAWpA";
 
-    String strKeyTest2 = "gtKFFX";
-    String strSaltProd2 = "eCwwELxi";
+
     String TAG = "TAG123";
     String txnid = "001", amount = "1.0", productinfo = "test", firstname = "shyam", email = "shyam@entitcs.com",
-            user_credentials = "", udf1 = "", udf2 = "", udf3 = "", udf4 = "", udf5 = "", offerKey = "", cardBin = "",
+            user_credentials = "", udf1 = "1", udf2 = "1", udf3 = "1", udf4 = "1", udf5 = "1", offerKey = "0", cardBin = "0",
             phone = "7224857968";
     String hashString = "";
 
@@ -60,17 +60,17 @@ public class MainActivity extends AppCompatActivity {
         additionalParams.put(PayUCheckoutProConstants.CP_UDF5, udf5);
 
         PayUPaymentParams.Builder builder = new PayUPaymentParams.Builder();
-        builder.setAmount(amount)
+        builder .setKey(strKey1)
                 .setIsProduction(true)
+                .setTransactionId(txnid)
+                .setAmount(amount)
                 .setProductInfo(productinfo)
-                .setKey(strKey1)
-                .setPhone(phone)
-                .setTransactionId(String.valueOf(System.currentTimeMillis()))
                 .setFirstName(firstname)
                 .setEmail(email)
+                .setPhone(phone)
                 .setSurl("https://payuresponse.firebaseapp.com/success")
-                .setFurl("https://payuresponse.firebaseapp.com/failure")
-                .setAdditionalParams(additionalParams);
+                .setFurl("https://payuresponse.firebaseapp.com/failure");
+//                .setAdditionalParams(additionalParams);
 
         PayUPaymentParams payUPaymentParams = builder.build();
 
@@ -103,6 +103,7 @@ public class MainActivity extends AppCompatActivity {
             public void onError(@NonNull ErrorResponse errorResponse) {
                 Log.e(TAG, "onError: "+errorResponse.getErrorCode() );
                 Log.e(TAG, "onError: "+errorResponse.getErrorMessage() );
+                Toast.makeText(MainActivity.this, String.valueOf(errorResponse.getErrorMessage()), Toast.LENGTH_SHORT).show();
             }
 
             @Override
@@ -129,10 +130,10 @@ public class MainActivity extends AppCompatActivity {
 
     void generateHash() {
         StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://nagarnigamprojects.in/morraipur/websiervice/webservice/payUMoneyHashGenerater.php", response -> {
-            Log.e(TAG, "generateHash:response " + response);
             try {
                 JSONObject jsonObject = new JSONObject(response);
                 hashString = jsonObject.getString("payment_hash");
+                Log.e(TAG, "generateHash: " + hashString);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -141,21 +142,23 @@ public class MainActivity extends AppCompatActivity {
         }) {
             @Nullable
             @Override
-            protected Map<String, String> getParams() throws AuthFailureError {
+            protected Map<String, String> getParams() {
                 HashMap<String, String> param = new HashMap<>();
                 param.put("txnid", txnid);
                 param.put("amount", amount);
                 param.put("productinfo", productinfo);
                 param.put("firstname", firstname);
                 param.put("email", email);
-                param.put("user_credentials", user_credentials);
-                param.put("udf1", udf1);
-                param.put("udf2", udf2);
-                param.put("udf3", udf3);
-                param.put("udf4", udf4);
-                param.put("udf5", udf5);
-                param.put("offerKey", offerKey);
-                param.put("cardBin", cardBin);
+                param.put("phone", phone);
+//                param.put("user_credentials", user_credentials);
+//                param.put("udf1", udf1);
+//                param.put("udf2", udf2);
+//                param.put("udf3", udf3);
+//                param.put("udf4", udf4);
+//                param.put("udf5", udf5);
+//                param.put("offerKey", offerKey);
+//                param.put("cardBin", cardBin);
+                Log.e(TAG, "getParams: "+param );
                 return param;
             }
         };
