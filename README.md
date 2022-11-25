@@ -2,7 +2,8 @@
 ### PayU-Money-Implementation for Android
 
 ### Steps
-- Hash Generation Principle Must follow https://payumobile.gitbook.io/sdk-integration/hash-generation
+- Hash Generation
+  - Hash Generation Principle Must follow https://payumobile.gitbook.io/sdk-integration/hash-generation
   - HashGeneration https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro/hash-details
   - Set up the payment hashes https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro/set-up-the-payment-hashes
 - Payment API https://devguide.payu.in/api/payments/payment-api/
