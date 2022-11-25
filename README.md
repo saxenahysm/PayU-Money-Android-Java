@@ -7,4 +7,4 @@
 - Set up the payment hashes https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro/set-up-the-payment-hashes
 - https://payumobile.gitbook.io/sdk-integration/
 - Youtube link https://www.youtube.com/watch?v=GvaoZC6jMIE
-- https://devguide.payu.in/api/payments/payment-api/
+- Must Follow this part https://devguide.payu.in/api/payments/payment-api/
