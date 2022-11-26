@@ -28,22 +28,21 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
-    //from RMC-client
     String strKey = "gtKFFx";
     String strSalt = "wia56q6O";
-//    String strKey = "gtKFFx";
-//    String strSalt = "4R38IvwiV57FwVpsgOvTXBdLE4tHUXFW";
+    //  String strKey = "gtKFFx";
+    //  String strSalt = "4R38IvwiV57FwVpsgOvTXBdLE4tHUXFW";
 
 
     String TAG = "TAG123";
     String txnid = "001", amount = "1.0", productinfo = "test", firstname = "shyam", email = "shyam@entitcs.com", user_credentials = "", udf1 = "1", udf2 = "1", udf3 = "1", udf4 = "1", udf5 = "1", offerKey = "0", cardBin = "0", phone = "7224857968";
-    String hashString = "";
 
     @Override
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        generateHashFromServer();
     }
 
     public void startPayment(View v) {
@@ -58,7 +57,6 @@ public class MainActivity extends AppCompatActivity {
         builder.setKey(strKey).setIsProduction(false).setTransactionId(txnid).setAmount(amount).setProductInfo(productinfo).setFirstName(firstname).setEmail(email)
                 //.setPhone(phone)
                 .setSurl("https://payuresponse.firebaseapp.com/success").setFurl("https://payuresponse.firebaseapp.com/failure").setAdditionalParams(additionalParams);
-        ;
 
         PayUPaymentParams payUPaymentParams = builder.build();
 
@@ -70,7 +68,9 @@ public class MainActivity extends AppCompatActivity {
                 HashMap<String, Object> result = (HashMap<String, Object>) response;
                 String payuResponse = (String) result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE);
                 String merchantResponse = (String) result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE);
-                Log.e(TAG, "onPaymentSuccess: " + payuResponse);
+                Log.e(TAG, "onPaymentSuccess: ");
+                Log.e(TAG, ":payuResponse " + payuResponse);
+                Log.e(TAG, ":merchantResponse " + merchantResponse);
             }
 
             @Override
@@ -103,32 +103,32 @@ public class MainActivity extends AppCompatActivity {
             public void generateHash(HashMap<String, String> valueMap, PayUHashGenerationListener hashGenerationListener) {
                 String hashName = valueMap.get(PayUCheckoutProConstants.CP_HASH_NAME);
                 String hashData = valueMap.get(PayUCheckoutProConstants.CP_HASH_STRING);
-//                Log.e(TAG, "hashData: " + hashData);
-                Log.e(TAG, i+"_hashName: " + hashName);
-                i++;
-//                Log.e(TAG, "size: " + valueMap.size());
-//                Log.e(TAG, "keySet: " + valueMap.keySet());
-//                Log.e(TAG, "entrySet: " + valueMap.entrySet());
-//                Log.e(TAG, "valueMap: " + valueMap);
-                //generateHashFromServer(hashName);
+                Log.e(TAG, "values: " +valueMap);
                 if (!TextUtils.isEmpty(hashName) && !TextUtils.isEmpty(hashData)) {
-                    //Do not generate hash from local, it needs to be calculated from server side only. Here, hashString contains hash created from your server side.
-                    String hash = hashString;
-                    dataMap.put(hashName, hash);
+                    /**
+                     * Do not generate hash from local, it needs to be calculated from server side only
+                     * Here, hashString contains hash created from your server side
+                     */
                     hashGenerationListener.onHashGenerated(dataMap);
                 }
             }
         });
     }
-int i=0;
+
     HashMap<String, String> dataMap = new HashMap<>();
 
-    void generateHashFromServer(String strHashName) {
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, "http://nagarnigamprojects.in/morraipur/websiervice/webservice/payUMoneyHashGenerater.php", response -> {
+    void generateHashFromServer() {
+        StringRequest stringRequest = new StringRequest(Request.Method.POST, getString(R.string.generateHashForPayment), response -> {
             try {
                 JSONObject jsonObject = new JSONObject(response);
-                hashString = jsonObject.getString(strHashName + "_hash");
-                Log.e(TAG, "generateHashFromServer: " + jsonObject.getString(strHashName + "_hash"));
+                dataMap.put("get_sdk_configuration", jsonObject.getString("get_sdk_configuration_hash"));
+                dataMap.put("payment_related_details_for_mobile_sdk", jsonObject.getString("payment_related_details_for_mobile_sdk_hash"));
+//                dataMap.put("payment", jsonObject.getString("payment_hash"));
+//                dataMap.put("get_merchant_ibibo_codes", jsonObject.getString("get_merchant_ibibo_codes_hash"));
+//                dataMap.put("vas_for_mobile_sdk", jsonObject.getString("vas_for_mobile_sdk_hash"));
+//                dataMap.put("emi", jsonObject.getString("emi_hash"));
+//                dataMap.put("verify_payment", jsonObject.getString("verify_payment_hash"));
+                Log.e(TAG, "dataMap: "+dataMap );
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -144,15 +144,15 @@ int i=0;
                 param.put("productinfo", productinfo);
                 param.put("firstname", firstname);
                 param.put("email", email);
-                //param.put("phone", phone);
-//                param.put("user_credentials", user_credentials);
-//                param.put("udf1", udf1);
-//                param.put("udf2", udf2);
-//                param.put("udf3", udf3);
-//                param.put("udf4", udf4);
-//                param.put("udf5", udf5);
-//                param.put("offerKey", offerKey);
-//                param.put("cardBin", cardBin);
+                param.put("phone", phone);
+                param.put("user_credentials", user_credentials);
+                param.put("udf1", udf1);
+                param.put("udf2", udf2);
+                param.put("udf3", udf3);
+                param.put("udf4", udf4);
+                param.put("udf5", udf5);
+                param.put("offerKey", offerKey);
+                param.put("cardBin", cardBin);
                 return param;
             }
         };

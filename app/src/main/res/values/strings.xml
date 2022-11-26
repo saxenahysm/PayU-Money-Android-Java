@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">PayUDemo</string>
+    <string name="generateHashForPayment">http://nagarnigamprojects.in/morraipur/websiervice/webservice/payUMoneyHashGenerater.php</string>
 </resources>
