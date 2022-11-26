@@ -19,7 +19,7 @@
 - Youtube link https://www.youtube.com/watch?v=GvaoZC6jMIE
 
 
- [1]: [https://square.github.io/retrofit/](https://github.com/saxenahysm/PayU-Money-Android-Java/blob/master/payUMoneyHashGenerater.php)
+ [1]: https://github.com/saxenahysm/PayU-Money-Android-Java/blob/master/payUMoneyHashGenerater.php
  [2]: https://square.github.io/retrofit/
  [3]: https://square.github.io/retrofit/
  [4]: https://square.github.io/retrofit/
