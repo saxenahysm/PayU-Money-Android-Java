@@ -2,6 +2,7 @@
 ### PayU-Money-Implementation for Android
 ----------
 ### Steps
+- Dependency `in.payu:payu-checkout-pro:2.0.2`
 - Hash Generation
   - Hash Generation Principle Must follow https://payumobile.gitbook.io/sdk-integration/hash-generation
   - Dynamic & Static Hash https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro/hash-details
