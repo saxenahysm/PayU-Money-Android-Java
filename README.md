@@ -14,7 +14,7 @@
   
   
 - Payment API 
-  - Mandatory Fields https://devguide.payu.in/api/payments/payment-api/
+  - Mandatory Fields [link][5].
 ---------
 - Youtube link [Click here][2].
 
@@ -23,5 +23,6 @@
  [3]: https://payumobile.gitbook.io/sdk-integration/hash-generation
  [4]: https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro/hash-details
  [5]: https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro/set-up-the-payment-hashes
+ [6]: https://devguide.payu.in/api/payments/payment-api/
 
 
