@@ -19,7 +19,7 @@
 ---------
 - Official Doc 
   - Official Doc-1 [link][8].
-  - Official Doc-1 [link][9].
+  - Official Doc-2 [link][9].
 ---------
 
 - Youtube link [Click here][2].
