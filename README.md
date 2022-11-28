@@ -3,7 +3,7 @@
 ----------
 ### Steps
 - Dependency 
-  - `in.payu:payu-checkout-pro:2.0.2`
+  - `in.payu:payu-checkout-pro:2.0.3`
 - Example File for Hash-Generation [PHP File][1].
 - Example File for Payment-Initialization [JAVA File][7].
   
