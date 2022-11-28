@@ -9,17 +9,17 @@
   
 
 - Hash Generation
-  - Hash Generation Principle Must follow [link][3].
-  - Dynamic & Static Hash [link][4].
-  - Set up the payment hashes [link][5].
+  - Hash Generation Principle Must follow [click here][3].
+  - Dynamic & Static Hash [click here][4].
+  - Set up the payment hashes [click here][5].
   
   
 - Payment API 
-  - Mandatory Fields [link][5].
+  - Mandatory Fields [click here][5].
 ---------
 - Official Doc 
-  - Official Doc-1 [link][8].
-  - Official Doc-2 [link][9].
+  - Official Doc-1 [click here][8].
+  - Official Doc-2 [click here][9].
 ---------
 
 - Youtube link [Click here][2].
