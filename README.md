@@ -17,6 +17,11 @@
 - Payment API 
   - Mandatory Fields [link][5].
 ---------
+- Official Doc 
+  - Official Doc-1 [link][8].
+  - Official Doc-1 [link][9].
+---------
+
 - Youtube link [Click here][2].
 
  [1]: https://github.com/saxenahysm/PayU-Money-Android-Java/blob/master/payUMoneyHashGenerater.php
@@ -26,5 +31,7 @@
  [5]: https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro/set-up-the-payment-hashes
  [6]: https://devguide.payu.in/api/payments/payment-api/
  [7]: https://github.com/saxenahysm/PayU-Money-Android-Java/blob/master/app/src/main/java/com/shyam/payudemo/MainActivity.java
+ [8]: https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro
+ [9]: https://devguide.payu.in/mobile-sdk-android/payu-checkout-pro/
 
 
