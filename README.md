@@ -24,6 +24,8 @@
 
 - Youtube link [Click here][2].
 
+> Note : Response data for UPI and Card Payments are different parse carefully
+
  [1]: https://github.com/saxenahysm/PayU-Money-Android-Java/blob/master/payUMoneyHashGenerater.php
  [2]: https://www.youtube.com/watch?v=GvaoZC6jMIE
  [3]: https://payumobile.gitbook.io/sdk-integration/hash-generation
