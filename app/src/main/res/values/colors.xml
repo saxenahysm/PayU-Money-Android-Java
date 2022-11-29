@@ -7,13 +7,8 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFF</color>
-
-    <color name="one_payu_colorPrimary">#00bcd4</color>
-    <color name="one_payu_colorPrimaryDark">#029DB1</color>
-    <color name="one_payu_colorAccent">#191819</color>
-    <color name="one_payu_baseTextColor">#FFFFFF</color> //Text color of header text
-    <!-- <color name="one_payu_colorPrimary">#995FED</color>
+  <color name="one_payu_colorPrimary">#995FED</color>
     <color name="one_payu_colorPrimaryDark">#8738F8</color>
     <color name="one_payu_colorAccent">#C09FE8</color>
-    <color name="one_payu_baseTextColor">#FFFFFF</color> //Text color of header text and button text-->
+    <color name="one_payu_baseTextColor">#FFFFFF</color> //Text color of header text and button text
 </resources>

@@ -1,0 +1,344 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.shyam.payudemo"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+8-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml
+10
+11    <uses-permission android:name="android.permission.INTERNET" />
+11-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:5:5-67
+11-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:5:22-64
+12    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+12-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:11:5-79
+12-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:11:22-76
+13    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+13-->[in.payu:payu-checkout-pro-ui:1.9.3] C:\Users\Shyam\.gradle\caches\transforms-3\4c36d0ee256265789ed0384b5a202515\transformed\payu-checkout-pro-ui-1.9.3\AndroidManifest.xml:13:5-76
+13-->[in.payu:payu-checkout-pro-ui:1.9.3] C:\Users\Shyam\.gradle\caches\transforms-3\4c36d0ee256265789ed0384b5a202515\transformed\payu-checkout-pro-ui-1.9.3\AndroidManifest.xml:13:22-73
+14
+15    <queries>
+15-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:14:5-58:15
+16        <package android:name="in.amazon.mShop.android.shopping" />
+16-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:15:9-68
+16-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:15:18-65
+17        <package android:name="com.upi.axispay" />
+17-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:16:9-51
+17-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:16:18-48
+18        <package android:name="com.axis.mobile" />
+18-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:17:9-51
+18-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:17:18-48
+19        <package android:name="com.fisglobal.bandhanupi.app" />
+19-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:18:9-64
+19-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:18:18-61
+20        <package android:name="com.bankofbaroda.upi" />
+20-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:19:9-56
+20-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:19:18-53
+21        <package android:name="in.org.npci.upiapp" />
+21-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:20:9-54
+21-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:20:18-51
+22        <package android:name="com.canarabank.mobility" />
+22-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:21:9-59
+22-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:21:18-56
+23        <package android:name="com.citiuat" />
+23-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:22:9-47
+23-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:22:18-44
+24        <package android:name="com.dbs.in.digitalbank" />
+24-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:23:9-58
+24-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:23:18-55
+25        <package android:name="com.olive.dcb.upi" />
+25-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:24:9-53
+25-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:24:18-50
+26        <package android:name="com.finopaytech.bpayfino" />
+26-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:25:9-60
+26-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:25:18-57
+27        <package android:name="com.freecharge.android" />
+27-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:26:9-58
+27-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:26:18-55
+28        <package android:name="com.google.android.apps.nbu.paisa.user" />
+28-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:27:9-74
+28-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:27:18-71
+29        <package android:name="com.snapwork.hdfc" />
+29-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:28:9-53
+29-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:28:18-50
+30        <package android:name="com.mgs.hsbcupi" />
+30-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:29:9-51
+30-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:29:18-48
+31        <package android:name="com.csam.icici.bank.imobile" />
+31-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:30:9-63
+31-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:30:18-60
+32        <package android:name="com.icicibank.pockets" />
+32-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:31:9-57
+32-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:31:18-54
+33        <package android:name="com.euronet.iobupi" />
+33-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:32:9-54
+33-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:32:18-51
+34        <package android:name="com.mgs.induspsp" />
+34-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:33:9-52
+34-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:33:18-49
+35        <package android:name="com.fss.jnkpsp" />
+35-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:34:9-50
+35-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:34:18-47
+36        <package android:name="com.jio.myjio" />
+36-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:35:9-49
+36-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:35:18-46
+37        <package android:name="com.mycompany.kvb" />
+37-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:36:9-53
+37-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:36:18-50
+38        <package android:name="com.kvb.mobilebanking" />
+38-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:37:9-57
+38-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:37:18-54
+39        <package android:name="com.lcode.smartz" />
+39-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:38:9-52
+39-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:38:18-49
+40        <package android:name="com.msf.kbank.mobile" />
+40-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:39:9-56
+40-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:39:18-53
+41        <package android:name="com.upi.federalbank.org.lotza" />
+41-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:40:9-65
+41-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:40:18-62
+42        <package android:name="com.infrasofttech.mahaupi" />
+42-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:41:9-61
+42-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:41:18-58
+43        <package android:name="com.mipay.in.wallet" />
+43-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:42:9-55
+43-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:42:18-52
+44        <package android:name="com.myairtelapp" />
+44-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:43:9-51
+44-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:43:18-48
+45        <package android:name="com.mobikwik_new" />
+45-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:44:9-52
+45-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:44:18-49
+46        <package android:name="com.onymy.paybee.prod" />
+46-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:45:9-57
+46-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:45:18-54
+47        <package android:name="net.one97.paytm" />
+47-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:46:9-51
+47-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:46:18-48
+48        <package android:name="com.phonepe.app" />
+48-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:47:9-51
+48-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:47:18-48
+49        <package android:name="com.Version1" />
+49-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:48:9-48
+49-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:48:18-45
+50        <package android:name="com.samsung.android.spay" />
+50-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:49:9-60
+50-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:49:18-57
+51        <package android:name="com.sbi.upi" />
+51-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:50:9-47
+51-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:50:18-44
+52        <package android:name="com.SIBMobile" />
+52-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:51:9-49
+52-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:51:18-46
+53        <package android:name="com.truecaller" />
+53-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:52:9-50
+53-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:52:18-47
+54        <package android:name="com.infrasoft.uboi" />
+54-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:53:9-54
+54-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:53:18-51
+55        <package android:name="com.lcode.ucoupi" />
+55-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:54:9-52
+55-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:54:18-49
+56        <package android:name="com.YesBank" />
+56-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:55:9-47
+56-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:55:18-44
+57        <package android:name="com.dreamplug.androidapp" />
+57-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:56:9-60
+57-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:56:18-57
+58        <package android:name="money.bullet" />
+58-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:57:9-48
+58-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:57:18-45
+59    </queries>
+60
+61    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+61-->[in.payu:payu-asset-library-android:1.7.3] C:\Users\Shyam\.gradle\caches\transforms-3\f38643a33c6ef404b16ca08182814e67\transformed\payu-asset-library-android-1.7.3\AndroidManifest.xml:11:5-80
+61-->[in.payu:payu-asset-library-android:1.7.3] C:\Users\Shyam\.gradle\caches\transforms-3\f38643a33c6ef404b16ca08182814e67\transformed\payu-asset-library-android-1.7.3\AndroidManifest.xml:11:22-77
+62    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+62-->[in.payu:payu-asset-library-android:1.7.3] C:\Users\Shyam\.gradle\caches\transforms-3\f38643a33c6ef404b16ca08182814e67\transformed\payu-asset-library-android-1.7.3\AndroidManifest.xml:12:5-81
+62-->[in.payu:payu-asset-library-android:1.7.3] C:\Users\Shyam\.gradle\caches\transforms-3\f38643a33c6ef404b16ca08182814e67\transformed\payu-asset-library-android-1.7.3\AndroidManifest.xml:12:22-78
+63    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+63-->[com.minkasu:minkasu-2fa:3.0.0] C:\Users\Shyam\.gradle\caches\transforms-3\0440ebdbcb5940ee2a3dc435388ed26c\transformed\minkasu-2fa-3.0.0\AndroidManifest.xml:12:5-74
+63-->[com.minkasu:minkasu-2fa:3.0.0] C:\Users\Shyam\.gradle\caches\transforms-3\0440ebdbcb5940ee2a3dc435388ed26c\transformed\minkasu-2fa-3.0.0\AndroidManifest.xml:12:22-71
+64
+65    <application
+65-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:7:5-36:19
+66        android:allowBackup="true"
+66-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:8:9-35
+67        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+67-->[androidx.core:core:1.8.0] C:\Users\Shyam\.gradle\caches\transforms-3\87a796fe63836d99a2198ac6a6284cb3\transformed\core-1.8.0\AndroidManifest.xml:24:18-86
+68        android:dataExtractionRules="@xml/data_extraction_rules"
+68-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:9:9-65
+69        android:debuggable="true"
+70        android:fullBackupContent="@xml/backup_rules"
+70-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:10:9-54
+71        android:icon="@mipmap/ic_launcher"
+71-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:11:9-43
+72        android:label="@string/app_name"
+72-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:12:9-41
+73        android:networkSecurityConfig="@xml/network_security_config"
+73-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:13:9-69
+74        android:roundIcon="@mipmap/ic_launcher_round"
+74-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:14:9-54
+75        android:supportsRtl="true"
+75-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:15:9-35
+76        android:testOnly="true"
+77        android:theme="@style/Theme.PayUDemo"
+77-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:16:9-46
+78        android:usesCleartextTraffic="false" >
+78-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:17:18-54
+79        <activity
+79-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:19:9-27:20
+80            android:name="com.shyam.payudemo.PaymentActivity"
+80-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:20:13-44
+81            android:exported="true" >
+81-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:21:13-36
+82            <intent-filter>
+82-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:22:13-26:29
+83                <action android:name="android.intent.action.MAIN" />
+83-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:23:17-69
+83-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:23:25-66
+84
+85                <category android:name="android.intent.category.LAUNCHER" />
+85-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:25:17-77
+85-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:25:27-74
+86            </intent-filter>
+87        </activity>
+88        <activity
+88-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:28:9-35:20
+89            android:name="com.shyam.payudemo.MainActivity"
+89-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:29:13-41
+90            android:exported="true" >
+90-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:30:13-36
+91            <meta-data
+91-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:32:13-34:36
+92                android:name="android.app.lib_name"
+92-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:33:17-52
+93                android:value="" />
+93-->G:\A_SHYAM_06_2021\ANDROID_PROJECTS\Demo-Projects-06-2021\PaymentGateways\PayUDemo\app\src\main\AndroidManifest.xml:34:17-33
+94        </activity>
+95
+96        <meta-data
+96-->[in.payu:payu-checkout-pro:2.0.3] C:\Users\Shyam\.gradle\caches\transforms-3\5de6f57bdadd3ad0251ce524bcf6c7c8\transformed\payu-checkout-pro-2.0.3\AndroidManifest.xml:14:9-16:32
+97            android:name="io.sentry.proguard-uuid"
+97-->[in.payu:payu-checkout-pro:2.0.3] C:\Users\Shyam\.gradle\caches\transforms-3\5de6f57bdadd3ad0251ce524bcf6c7c8\transformed\payu-checkout-pro-2.0.3\AndroidManifest.xml:15:13-51
+98            android:value="" />
+98-->[in.payu:payu-checkout-pro:2.0.3] C:\Users\Shyam\.gradle\caches\transforms-3\5de6f57bdadd3ad0251ce524bcf6c7c8\transformed\payu-checkout-pro-2.0.3\AndroidManifest.xml:16:13-29
+99
+100        <activity
+100-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:18:9-21:63
+101            android:name="com.payu.custombrowser.CBActivity"
+101-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:19:13-61
+102            android:screenOrientation="portrait"
+102-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:20:13-49
+103            android:windowSoftInputMode="stateAlwaysHidden" />
+103-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:21:13-60
+104        <activity
+104-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:22:9-26:20
+105            android:name="com.minkasu.android.twofa.sdk.MinkasuSDKActivity"
+105-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:23:13-76
+106            android:configChanges="orientation|screenSize|screenLayout|keyboardHidden"
+106-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:24:13-87
+107            android:theme="@style/OneClickPayuTheme" >
+107-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:25:13-53
+108        </activity>
+109
+110        <service android:name="com.payu.custombrowser.services.SnoozeService" />
+110-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:28:9-81
+110-->[in.payu:payu-custom-browser:7.11.2] C:\Users\Shyam\.gradle\caches\transforms-3\90d2141c18bb7b0658a9764f1508c71f\transformed\payu-custom-browser-7.11.2\AndroidManifest.xml:28:18-78
+111
+112        <activity
+112-->[in.payu:payu-checkout-pro-ui:1.9.3] C:\Users\Shyam\.gradle\caches\transforms-3\4c36d0ee256265789ed0384b5a202515\transformed\payu-checkout-pro-ui-1.9.3\AndroidManifest.xml:18:9-20:52
+113            android:name="com.payu.ui.view.activities.CheckoutActivity"
+113-->[in.payu:payu-checkout-pro-ui:1.9.3] C:\Users\Shyam\.gradle\caches\transforms-3\4c36d0ee256265789ed0384b5a202515\transformed\payu-checkout-pro-ui-1.9.3\AndroidManifest.xml:19:13-72
+114            android:screenOrientation="portrait" />
+114-->[in.payu:payu-checkout-pro-ui:1.9.3] C:\Users\Shyam\.gradle\caches\transforms-3\4c36d0ee256265789ed0384b5a202515\transformed\payu-checkout-pro-ui-1.9.3\AndroidManifest.xml:20:13-49
+115
+116        <meta-data
+116-->[in.payu:payu-checkout-pro-ui:1.9.3] C:\Users\Shyam\.gradle\caches\transforms-3\4c36d0ee256265789ed0384b5a202515\transformed\payu-checkout-pro-ui-1.9.3\AndroidManifest.xml:22:9-24:57
+117            android:name="preloaded_fonts"
+117-->[in.payu:payu-checkout-pro-ui:1.9.3] C:\Users\Shyam\.gradle\caches\transforms-3\4c36d0ee256265789ed0384b5a202515\transformed\payu-checkout-pro-ui-1.9.3\AndroidManifest.xml:23:13-43
+118            android:resource="@array/preloaded_fonts" />
+118-->[in.payu:payu-checkout-pro-ui:1.9.3] C:\Users\Shyam\.gradle\caches\transforms-3\4c36d0ee256265789ed0384b5a202515\transformed\payu-checkout-pro-ui-1.9.3\AndroidManifest.xml:24:13-54
+119
+120        <activity
+120-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:63:9-66:63
+121            android:name="com.payu.upisdk.upiintent.PaymentResponseUpiSdkActivity"
+121-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:64:13-83
+122            android:theme="@style/Theme.AppCompat.Transparent.NoActionBar"
+122-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:65:13-75
+123            android:windowSoftInputMode="stateAlwaysHidden" />
+123-->[in.payu:upisdk:1.6.2] C:\Users\Shyam\.gradle\caches\transforms-3\43d2f4c0aa1bf85e12bcaeb847aa1074\transformed\upisdk-1.6.2\AndroidManifest.xml:66:13-60
+124        <activity
+124-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:23:9-27:75
+125            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+125-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:24:13-93
+126            android:excludeFromRecents="true"
+126-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:25:13-46
+127            android:exported="false"
+127-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:26:13-37
+128            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+128-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:27:13-72
+129        <!--
+130            Service handling Google Sign-In user revocation. For apps that do not integrate with
+131            Google Sign-In, this service will never be started.
+132        -->
+133        <service
+133-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:33:9-37:51
+134            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+134-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:34:13-89
+135            android:exported="true"
+135-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:35:13-36
+136            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+136-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:36:13-107
+137            android:visibleToInstantApps="true" />
+137-->[com.google.android.gms:play-services-auth:20.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\bdb94f2a9f33fe46adb888a9e4067e5d\transformed\play-services-auth-20.2.0\AndroidManifest.xml:37:13-48
+138
+139        <activity
+139-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Shyam\.gradle\caches\transforms-3\9df4caf478e8a4a3e6e06e7b0287a07e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:9-22:45
+140            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+140-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Shyam\.gradle\caches\transforms-3\9df4caf478e8a4a3e6e06e7b0287a07e\transformed\play-services-base-18.0.1\AndroidManifest.xml:20:19-85
+141            android:exported="false"
+141-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Shyam\.gradle\caches\transforms-3\9df4caf478e8a4a3e6e06e7b0287a07e\transformed\play-services-base-18.0.1\AndroidManifest.xml:22:19-43
+142            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+142-->[com.google.android.gms:play-services-base:18.0.1] C:\Users\Shyam\.gradle\caches\transforms-3\9df4caf478e8a4a3e6e06e7b0287a07e\transformed\play-services-base-18.0.1\AndroidManifest.xml:21:19-78
+143
+144        <meta-data
+144-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Shyam\.gradle\caches\transforms-3\b4a76a349f706e6c557a13ae2ac7dde3\transformed\play-services-basement-18.0.0\AndroidManifest.xml:21:9-23:69
+145            android:name="com.google.android.gms.version"
+145-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Shyam\.gradle\caches\transforms-3\b4a76a349f706e6c557a13ae2ac7dde3\transformed\play-services-basement-18.0.0\AndroidManifest.xml:22:13-58
+146            android:value="@integer/google_play_services_version" />
+146-->[com.google.android.gms:play-services-basement:18.0.0] C:\Users\Shyam\.gradle\caches\transforms-3\b4a76a349f706e6c557a13ae2ac7dde3\transformed\play-services-basement-18.0.0\AndroidManifest.xml:23:13-66
+147
+148        <provider
+148-->[in.payu:payu-crash-logger:1.1.2] C:\Users\Shyam\.gradle\caches\transforms-3\f94ab23070c4451b5734d0ee53d46488\transformed\payu-crash-logger-1.1.2\AndroidManifest.xml:16:9-24:20
+149            android:name="androidx.startup.InitializationProvider"
+149-->[in.payu:payu-crash-logger:1.1.2] C:\Users\Shyam\.gradle\caches\transforms-3\f94ab23070c4451b5734d0ee53d46488\transformed\payu-crash-logger-1.1.2\AndroidManifest.xml:17:13-67
+150            android:authorities="com.shyam.payudemo.androidx-startup"
+150-->[in.payu:payu-crash-logger:1.1.2] C:\Users\Shyam\.gradle\caches\transforms-3\f94ab23070c4451b5734d0ee53d46488\transformed\payu-crash-logger-1.1.2\AndroidManifest.xml:18:13-68
+151            android:exported="false" >
+151-->[in.payu:payu-crash-logger:1.1.2] C:\Users\Shyam\.gradle\caches\transforms-3\f94ab23070c4451b5734d0ee53d46488\transformed\payu-crash-logger-1.1.2\AndroidManifest.xml:19:13-37
+152            <meta-data
+152-->[in.payu:payu-crash-logger:1.1.2] C:\Users\Shyam\.gradle\caches\transforms-3\f94ab23070c4451b5734d0ee53d46488\transformed\payu-crash-logger-1.1.2\AndroidManifest.xml:21:13-23:52
+153                android:name="com.payu.crashlogger.CrashProviderInitializer"
+153-->[in.payu:payu-crash-logger:1.1.2] C:\Users\Shyam\.gradle\caches\transforms-3\f94ab23070c4451b5734d0ee53d46488\transformed\payu-crash-logger-1.1.2\AndroidManifest.xml:22:17-77
+154                android:value="androidx.startup" />
+154-->[in.payu:payu-crash-logger:1.1.2] C:\Users\Shyam\.gradle\caches\transforms-3\f94ab23070c4451b5734d0ee53d46488\transformed\payu-crash-logger-1.1.2\AndroidManifest.xml:23:17-49
+155            <meta-data
+155-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+156                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+156-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+157                android:value="androidx.startup" />
+157-->[androidx.emoji2:emoji2:1.2.0] C:\Users\Shyam\.gradle\caches\transforms-3\c03fa7bc00a04a375204b573f0966d9f\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+158            <meta-data
+158-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Shyam\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:31:13-33:52
+159                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+159-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Shyam\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:32:17-78
+160                android:value="androidx.startup" />
+160-->[androidx.lifecycle:lifecycle-process:2.4.1] C:\Users\Shyam\.gradle\caches\transforms-3\0ce9e5f033589fdf0ab757f82f7808ec\transformed\lifecycle-process-2.4.1\AndroidManifest.xml:33:17-49
+161        </provider>
+162    </application>
+163
+164</manifest>

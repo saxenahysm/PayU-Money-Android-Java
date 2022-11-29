@@ -16,7 +16,8 @@
         android:theme="@style/Theme.PayUDemo"
         tools:replace="android:theme, allowBackup"
         tools:targetApi="31">
-        <activity android:name=".PaymentActivity"
+        <activity
+            android:name=".PaymentActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
