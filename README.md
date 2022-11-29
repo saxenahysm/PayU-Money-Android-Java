@@ -3,7 +3,7 @@
 ----------
 ### Steps
 - Dependency 
-  - `in.payu:payu-checkout-pro:2.0.2`
+  - `in.payu:payu-checkout-pro:2.0.3`
 - Example File for Hash-Generation [PHP File][1].
 - Example File for Payment-Initialization [JAVA File][7].
   
@@ -30,7 +30,7 @@
  [4]: https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro/hash-details
  [5]: https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro/set-up-the-payment-hashes
  [6]: https://devguide.payu.in/api/payments/payment-api/
- [7]: https://github.com/saxenahysm/PayU-Money-Android-Java/blob/master/app/src/main/java/com/shyam/payudemo/MainActivity.java
+ [7]: https://github.com/saxenahysm/PayU-Money-Android-Java/blob/master/app/src/main/java/com/shyam/payudemo/PaymentActivity.java
  [8]: https://payumobile.gitbook.io/sdk-integration/android/payucheckoutpro
  [9]: https://devguide.payu.in/mobile-sdk-android/payu-checkout-pro/
 
