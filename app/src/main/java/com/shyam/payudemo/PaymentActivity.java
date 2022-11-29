@@ -1,6 +1,5 @@
 package com.shyam.payudemo;
 
-import android.content.DialogInterface;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
@@ -16,6 +15,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.payu.base.models.ErrorResponse;
 import com.payu.base.models.PayUPaymentParams;
 import com.payu.checkoutpro.PayUCheckoutPro;
+import com.payu.checkoutpro.models.PayUCheckoutProConfig;
 import com.payu.checkoutpro.utils.PayUCheckoutProConstants;
 import com.payu.ui.model.listeners.PayUCheckoutProListener;
 import com.payu.ui.model.listeners.PayUHashGenerationListener;
@@ -24,10 +24,11 @@ import java.security.MessageDigest;
 import java.util.HashMap;
 
 public class PaymentActivity extends AppCompatActivity {
+    String TAG11="TAG11";
     Button paynow;
     private final String email = "shyam@entitcs.com";
-    private final String phone = "9999999999";
-    private final String merchantName = "RH Group";
+    private final String phone = "7224857968";
+    private final String merchantName = "RMC-Raipur";
     private final String surl = "https://payu.herokuapp.com/success";
     private final String furl = "https://payu.herokuapp.com/failure";
     private final String amount = "1.0";
@@ -60,10 +61,10 @@ public class PaymentActivity extends AppCompatActivity {
         PayUPaymentParams.Builder builder = new PayUPaymentParams.Builder();
         builder.setAmount(amount)
                 .setIsProduction(true)
-                .setProductInfo("Macbook Pro")
+                .setProductInfo("Property-Tax")
                 .setKey(prodKey)
                 .setPhone(phone)
-                .setTransactionId(String.valueOf(System.currentTimeMillis()))
+                .setTransactionId("RMC-DDN-"+ System.currentTimeMillis())
                 .setFirstName("shyam")
                 .setEmail(email)
                 .setSurl(surl)
@@ -75,11 +76,18 @@ public class PaymentActivity extends AppCompatActivity {
     }
 
     private void initUiSdk(PayUPaymentParams payUPaymentParams) {
-        PayUCheckoutPro.open(this, payUPaymentParams, new PayUCheckoutProListener() {
+        PayUCheckoutProConfig payUCheckoutProConfig = new PayUCheckoutProConfig();
+        payUCheckoutProConfig.setMerchantName("RMC-Property-Tax");
+        payUCheckoutProConfig.setMerchantLogo(R.drawable.ic_launcher_background);
+        payUCheckoutProConfig.setAutoApprove(true);
+        PayUCheckoutPro.open(this, payUPaymentParams, payUCheckoutProConfig, new PayUCheckoutProListener() {
 
             @Override
             public void onPaymentSuccess(Object response) {
-                showAlertDialog(response);
+//                showAlertDialog(response);
+                HashMap<String, Object> result = (HashMap<String, Object>) response;
+                Log.e(TAG11, "CP_PAYU_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE));
+                Log.e(TAG11, "CP_MERCHANT_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE));
             }
 
             @Override
@@ -114,14 +122,13 @@ public class PaymentActivity extends AppCompatActivity {
                     if (valueMap.containsKey(PayUCheckoutProConstants.CP_POST_SALT))
                         salt = salt + "" + (valueMap.get(PayUCheckoutProConstants.CP_POST_SALT));
 
-
                     String hash = null;
 
                     //Calculate SHA-512 Hash here
                     hash = calculateHash(hashData + salt);
 
                     HashMap<String, String> dataMap = new HashMap<>();
-                    Log.e("TAG", "hashData: "+hashData );
+                    Log.e(TAG11, "hashData: " + hashData);
                     dataMap.put(hashName, hash);
                     hashGenerationListener.onHashGenerated(dataMap);
                 }
@@ -155,12 +162,11 @@ public class PaymentActivity extends AppCompatActivity {
                 .setCancelable(false)
                 .setMessage("Payu's Data : " + result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE)
                         + "\n\n\n Merchant's Data: " + result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE))
-                .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
-            @Override
-            public void onClick(DialogInterface dialogInterface, int i) {
-                dialogInterface.dismiss();
-            }
-        }).show();
-    }
+                .setPositiveButton("Ok", (dialogInterface, i) -> {
+                    dialogInterface.dismiss();
+                    Log.e(TAG11, "CP_PAYU_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE));
+                    Log.e(TAG11, "CP_MERCHANT_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE));
 
+                }).show();
+    }
 }

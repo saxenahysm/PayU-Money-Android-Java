@@ -1,10 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="purple_200">#FFBB86FC</color>
-    <color name="purple_500">#FF6200EE</color>
-    <color name="purple_700">#FF3700B3</color>
-    <color name="teal_200">#FF03DAC5</color>
+    <color name="purple_200">#C09FE8</color>
+    <color name="purple_500">#995FED</color>
+    <color name="purple_700">#8738F8</color>
+    <color name="teal_200">#2DA0D5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="one_payu_colorPrimary">#00bcd4</color>
+    <color name="one_payu_colorPrimaryDark">#029DB1</color>
+    <color name="one_payu_colorAccent">#191819</color>
+    <color name="one_payu_baseTextColor">#FFFFFF</color> //Text color of header text
+    <!-- <color name="one_payu_colorPrimary">#995FED</color>
+    <color name="one_payu_colorPrimaryDark">#8738F8</color>
+    <color name="one_payu_colorAccent">#C09FE8</color>
+    <color name="one_payu_baseTextColor">#FFFFFF</color> //Text color of header text and button text-->
 </resources>
