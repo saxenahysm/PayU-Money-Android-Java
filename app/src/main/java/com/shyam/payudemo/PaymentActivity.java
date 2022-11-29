@@ -77,8 +77,8 @@ public class PaymentActivity extends AppCompatActivity {
 
     private void initUiSdk(PayUPaymentParams payUPaymentParams) {
         PayUCheckoutProConfig payUCheckoutProConfig = new PayUCheckoutProConfig();
-        payUCheckoutProConfig.setMerchantName("RMC-Property-Tax");
-        payUCheckoutProConfig.setMerchantLogo(R.drawable.ic_launcher_background);
+        payUCheckoutProConfig.setMerchantName("@Dummy_artist");
+        payUCheckoutProConfig.setMerchantLogo(R.mipmap.ic_launcher_round);
         payUCheckoutProConfig.setAutoApprove(true);
         PayUCheckoutPro.open(this, payUPaymentParams, payUCheckoutProConfig, new PayUCheckoutProListener() {
 
