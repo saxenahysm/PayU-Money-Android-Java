@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.shyam.payudemo.app-mergeDebugResources-44:/values-large-v22/values-large-v22.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Shyam\\.gradle\\caches\\transforms-3\\90d2141c18bb7b0658a9764f1508c71f\\transformed\\payu-custom-browser-7.11.2\\res\\values-large-v22\\values-large-v22.xml",
+                    "from": {
+                        "startLines": "2,3",
+                        "startColumns": "4,4",
+                        "startOffsets": "55,148",
+                        "endLines": "2,5",
+                        "endColumns": "92,12",
+                        "endOffsets": "143,310"
+                    }
+                }
+            ]
+        }
+    ]
+}

@@ -20,11 +20,14 @@ import com.payu.checkoutpro.utils.PayUCheckoutProConstants;
 import com.payu.ui.model.listeners.PayUCheckoutProListener;
 import com.payu.ui.model.listeners.PayUHashGenerationListener;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.security.MessageDigest;
 import java.util.HashMap;
 
 public class PaymentActivity extends AppCompatActivity {
-    String TAG11="TAG11";
+    String TAG ="TAG11";
     Button paynow;
     private final String email = "shyam@entitcs.com";
     private final String phone = "7224857968";
@@ -33,7 +36,6 @@ public class PaymentActivity extends AppCompatActivity {
     private final String furl = "https://payu.herokuapp.com/failure";
     private final String amount = "1.0";
 
-    //please use your own prodKey & prodSalt just use below key & salt for testing purpose
     private final String prodKey = "smsplus";
     private final String prodSalt = "1b1b0";
 
@@ -60,7 +62,7 @@ public class PaymentActivity extends AppCompatActivity {
 
         PayUPaymentParams.Builder builder = new PayUPaymentParams.Builder();
         builder.setAmount(amount)
-                .setIsProduction(true)
+                .setIsProduction(false)
                 .setProductInfo("Property-Tax")
                 .setKey(prodKey)
                 .setPhone(phone)
@@ -86,8 +88,8 @@ public class PaymentActivity extends AppCompatActivity {
             public void onPaymentSuccess(Object response) {
 //                showAlertDialog(response);
                 HashMap<String, Object> result = (HashMap<String, Object>) response;
-                Log.e(TAG11, "CP_PAYU_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE));
-                Log.e(TAG11, "CP_MERCHANT_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE));
+                Log.e(TAG, "CP_PAYU_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE));
+                Log.e(TAG, "CP_MERCHANT_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE));
             }
 
             @Override
@@ -128,7 +130,7 @@ public class PaymentActivity extends AppCompatActivity {
                     hash = calculateHash(hashData + salt);
 
                     HashMap<String, String> dataMap = new HashMap<>();
-                    Log.e(TAG11, "hashData: " + hashData);
+                    Log.e(TAG, "hashData: " + hashData);
                     dataMap.put(hashName, hash);
                     hashGenerationListener.onHashGenerated(dataMap);
                 }
@@ -164,8 +166,19 @@ public class PaymentActivity extends AppCompatActivity {
                         + "\n\n\n Merchant's Data: " + result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE))
                 .setPositiveButton("Ok", (dialogInterface, i) -> {
                     dialogInterface.dismiss();
-                    Log.e(TAG11, "CP_PAYU_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE));
-                    Log.e(TAG11, "CP_MERCHANT_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE));
+                    Log.e(TAG, "CP_PAYU_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE));
+//                    Log.e(TAG11, "CP_MERCHANT_RESPONSE: " + result.get(PayUCheckoutProConstants.CP_MERCHANT_RESPONSE));
+                    try {
+                        JSONObject jsonObject=new JSONObject(String.valueOf(result.get(PayUCheckoutProConstants.CP_PAYU_RESPONSE)));
+                        if (jsonObject.has("result")) {
+                            JSONObject upiJson = jsonObject.getJSONObject("result");
+                            Log.e(TAG, "upiJson: "+upiJson );
+                        }else {
+                            Log.e(TAG, "status: " + jsonObject.getString("status"));
+                        }
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
 
                 }).show();
     }

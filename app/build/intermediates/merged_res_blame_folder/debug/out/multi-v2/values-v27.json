@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "com.shyam.payudemo.app-mergeDebugResources-44:/values-v27/values-v27.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Shyam\\.gradle\\caches\\transforms-3\\43d2f4c0aa1bf85e12bcaeb847aa1074\\transformed\\upisdk-1.6.2\\res\\values-v27\\values-v27.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endLines": "10",
+                        "endColumns": "12",
+                        "endOffsets": "612"
+                    }
+                }
+            ]
+        }
+    ]
+}

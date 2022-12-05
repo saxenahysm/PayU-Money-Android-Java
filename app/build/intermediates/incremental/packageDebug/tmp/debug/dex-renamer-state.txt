@@ -1,0 +1,16 @@
+#Mon Dec 05 16:37:25 IST 2022
+path.4=0/classes2.dex
+path.3=classes2.dex
+path.2=3/classes.dex
+path.1=0/classes.dex
+path.0=classes.dex
+base.4=G\:\\A_SHYAM_06_2021\\ANDROID_PROJECTS\\Demo-Projects-06-2021\\PaymentGateways\\PayUDemo\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes2.dex
+base.3=G\:\\A_SHYAM_06_2021\\ANDROID_PROJECTS\\Demo-Projects-06-2021\\PaymentGateways\\PayUDemo\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.2=G\:\\A_SHYAM_06_2021\\ANDROID_PROJECTS\\Demo-Projects-06-2021\\PaymentGateways\\PayUDemo\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\3\\classes.dex
+base.1=G\:\\A_SHYAM_06_2021\\ANDROID_PROJECTS\\Demo-Projects-06-2021\\PaymentGateways\\PayUDemo\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\0\\classes.dex
+base.0=G\:\\A_SHYAM_06_2021\\ANDROID_PROJECTS\\Demo-Projects-06-2021\\PaymentGateways\\PayUDemo\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
+renamed.3=classes4.dex
+renamed.2=classes3.dex
+renamed.1=classes2.dex
+renamed.0=classes.dex
+renamed.4=classes5.dex
