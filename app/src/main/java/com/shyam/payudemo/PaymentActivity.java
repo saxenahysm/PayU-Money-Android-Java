@@ -29,9 +29,9 @@ import java.util.HashMap;
 public class PaymentActivity extends AppCompatActivity {
     String TAG ="TAG11";
     Button paynow;
-    private final String email = "shyam@entitcs.com";
-    private final String phone = "7224857968";
-    private final String merchantName = "RMC-Raipur";
+    private final String email = "user@gmail.com";
+    private final String phone = "9876543210";
+    private final String merchantName = "Test";
     private final String surl = "https://payu.herokuapp.com/success";
     private final String furl = "https://payu.herokuapp.com/failure";
     private final String amount = "1.0";
@@ -63,15 +63,15 @@ public class PaymentActivity extends AppCompatActivity {
         PayUPaymentParams.Builder builder = new PayUPaymentParams.Builder();
         builder.setAmount(amount)
                 .setIsProduction(false)
-                .setProductInfo("Property-Tax")
+                .setProductInfo("Test-Tax")
                 .setKey(prodKey)
                 .setPhone(phone)
-                .setTransactionId("RMC-DDN-"+ System.currentTimeMillis())
+                .setTransactionId("Test-"+ System.currentTimeMillis())
                 .setFirstName("shyam")
                 .setEmail(email)
                 .setSurl(surl)
                 .setFurl(furl)
-                .setUserCredential(prodKey + ":shyam@entitcs.com")
+                .setUserCredential(prodKey + ":user@gmail.com")
                 .setAdditionalParams(additionalParams);
         PayUPaymentParams payUPaymentParams = builder.build();
         return payUPaymentParams;
@@ -79,7 +79,7 @@ public class PaymentActivity extends AppCompatActivity {
 
     private void initUiSdk(PayUPaymentParams payUPaymentParams) {
         PayUCheckoutProConfig payUCheckoutProConfig = new PayUCheckoutProConfig();
-        payUCheckoutProConfig.setMerchantName("@Dummy_artist");
+        payUCheckoutProConfig.setMerchantName("test");
         payUCheckoutProConfig.setMerchantLogo(R.mipmap.ic_launcher_round);
         payUCheckoutProConfig.setAutoApprove(true);
         PayUCheckoutPro.open(this, payUPaymentParams, payUCheckoutProConfig, new PayUCheckoutProListener() {
