@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
 
     String TAG = "TAG123";
-    String txnid = "001", amount = "1.0", productinfo = "test", firstname = "shyam", email = "shyam@entitcs.com", user_credentials = "", udf1 = "1", udf2 = "1", udf3 = "1", udf4 = "1", udf5 = "1", offerKey = "0", cardBin = "0", phone = "7224857968";
+    String txnid = "001", amount = "1.0", productinfo = "test", firstname = "shyam", email = "user@gmail.com", user_credentials = "", udf1 = "1", udf2 = "1", udf3 = "1", udf4 = "1", udf5 = "1", offerKey = "0", cardBin = "0", phone = "7896541230";
 
     @Override
 
